@@ -84,12 +84,12 @@ class Mandrill extends BaseMailer
     }
 	
     /**
-     * sendMail for Mandrill
+     * send Email for Mandrill
      *
      * @param string $body 
      * @throws InvalidConfigException
      */
-	public function sendMail($to, $from, $fromname, $do_not_reply, $subject, $body, $attachment='')
+	public function send($to, $from, $fromname, $do_not_reply, $subject, $body, $attachment='')
 	{
 		//print_r($attachment); exit;
 		$this->to = $to;

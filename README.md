@@ -12,7 +12,7 @@ Add component to `config/main.php`
 ```php
 'components' => [
 // ...
-'mandrill' => array (
+'email' => array (
             'class' => 'app\components\Mandrill',
             'apikey' => 'your mandrill api key',
         ),
@@ -36,5 +36,5 @@ $this->body = 'email body';
 $this->donotreply = 'donotreply email';
 $this->subject = 'email subject';	
 
-\Yii::$app->mailer->sendMail($to, $this->frommail, $this->fromname, $this->donotreply, $this->subject, $this->body);
+\Yii::$app->email->send($to, $this->frommail, $this->fromname, $this->donotreply, $this->subject, $this->body);
 ```
